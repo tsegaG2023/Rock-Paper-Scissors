@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link src="script.js" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>test</p>
+    <script>
+      function validation(user_Entered_Number) {
+        return user_Entered_Number > 3 || user_Entered_Number < 1
+          ? false
+          : true;
+      }
+      function findChoiceInText(choice_In_Num) {
+        const r_choice_txt =
+          choice_In_Num == 1
+            ? "Rock"
+            : choice_In_Num == 2
+            ? "Paper"
+            : choice_In_Num == 3
+            ? "Scissors"
+            : "ERROR";
+        return r_choice_txt;
+      }
+      function getComputerChoice() {
+        const r_choice_num = Math.floor(Math.random() * 3) + 1;
+        const r_choice_txt = findChoiceInText(r_choice_num);
+
+        console.log("Compueter choice: " + r_choice_txt);
+        return r_choice_txt;
+      }
+
+      function getUsersChoice() {
+        let gameResult = 0;
+        const r_user_choice_In_Num = prompt("Enter your choice ?");
+        if (validation(r_user_choice_In_Num)) {
+          const r_user_choice = findChoiceInText(r_user_choice_In_Num);
+          gameResult = play(r_user_choice, getComputerChoice());
+        } else {
+          console.log("Enter between 1 and 3!!!");
+        }
+        return gameResult;
+      }
+      function play(r_user_choice, r_computer_choice) {
+        console.log("Users choice: " + r_user_choice);
+        // const r_computer_choice = getComputerChoice();
+        let result = "";
+        if (r_computer_choice === "Rock" && r_user_choice === "scissors") {
+          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
+        } else if (r_computer_choice === "Paper" && r_user_choice === "Rock") {
+          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
+        } else if (
+          r_computer_choice === "Scissors" &&
+          r_user_choice === "Paper"
+        ) {
+          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
+        } else if (r_computer_choice === r_user_choice) {
+          result = `It is a tie! ${r_computer_choice} equals ${r_user_choice}`;
+        } else {
+          result = `You Won! ${r_user_choice} beats ${r_computer_choice}`;
+        }
+        return result.includes("Won") ? 1 : 0;
+      }
+
+      //   console.log("hey");
+      //   getComputerChoice();
+
+      function game() {
+        let gameResultComp = 0;
+        let gameResultUser = 0;
+        for (let i = 0; i <= 3; i++) {
+          getUsersChoice() === 0 ? gameResultComp++ : gameResultUser++;
+        }
+        gameResultUser > gameResultComp
+          ? alert(
+              `You WON: your result is ${gameResultUser} and the computer got ${gameResultComp}`
+            )
+          : gameResultUser === gameResultComp
+          ? alert(
+              `It is a tie: your result is ${gameResultUser} and the computer got ${gameResultComp}`
+            )
+          : alert(
+              `You Lose: your result is ${gameResultUser} and the computer got ${gameResultComp}`
+            );
+      }
+      game();
+    </script>
+  </body>
+</html>
