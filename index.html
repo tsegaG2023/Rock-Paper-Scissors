@@ -3,90 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link src="script.js" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
     <title>Document</title>
   </head>
   <body>
-    <p>test</p>
-    <script>
-      function validation(user_Entered_Number) {
-        return user_Entered_Number > 3 || user_Entered_Number < 1
-          ? false
-          : true;
-      }
-      function findChoiceInText(choice_In_Num) {
-        const r_choice_txt =
-          choice_In_Num == 1
-            ? "Rock"
-            : choice_In_Num == 2
-            ? "Paper"
-            : choice_In_Num == 3
-            ? "Scissors"
-            : "ERROR";
-        return r_choice_txt;
-      }
-      function getComputerChoice() {
-        const r_choice_num = Math.floor(Math.random() * 3) + 1;
-        const r_choice_txt = findChoiceInText(r_choice_num);
+    <div class="header-menu">
+      <ul>
+        <li class="logo"><img src="./images/dream_tech_logo.gif" /></li>
+        <li class="sign-up">Sign-up</li>
+        <li class="login">Login</li>
+      </ul>
+    </div>
+    <div class="games">
+      <!-- <p>Rock Paper Scissors</p> -->
+      <div class="game-rps">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img id="rps-post" src="./images/rps.jpg" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="./images/r.png" /></div>
+            <div><img class="rps" id="paper" src="./images/p.png" /></div>
+            <div><img class="rps" id="scissors" src="./images/s.png" /></div>
+            <div class="rps" id="close">close</div>
+          </div>
+        </div>
+      </div>
+      <div class="game-2">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/bioshock.png" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-3">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/call_of_duty.png" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-4">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/sonic.png" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-5">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/fight.png" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-6">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/zelda.png" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-7">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/mini_golf.JPG" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-8">
+        <div class="main">
+          <div class="rps">
+            <div class="choice">
+              <img src="./images/kirka.JPG" />
+              <div class="users"></div>
+              <div class="computer"></div>
+            </div>
+            <div class="result"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="start"><button>Play</button></div>
+          <div class="menu">
+            <div><img class="rps" id="rock" src="r.png" /></div>
+            <div><img class="rps" id="paper" src="p.png" /></div>
+            <div><img class="rps" id="scissors" src="s.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
 
-        console.log("Compueter choice: " + r_choice_txt);
-        return r_choice_txt;
-      }
-
-      function getUsersChoice() {
-        let gameResult = 0;
-        const r_user_choice_In_Num = prompt("Enter your choice ?");
-        if (validation(r_user_choice_In_Num)) {
-          const r_user_choice = findChoiceInText(r_user_choice_In_Num);
-          gameResult = play(r_user_choice, getComputerChoice());
-        } else {
-          console.log("Enter between 1 and 3!!!");
-        }
-        return gameResult;
-      }
-      function play(r_user_choice, r_computer_choice) {
-        console.log("Users choice: " + r_user_choice);
-        // const r_computer_choice = getComputerChoice();
-        let result = "";
-        if (r_computer_choice === "Rock" && r_user_choice === "scissors") {
-          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
-        } else if (r_computer_choice === "Paper" && r_user_choice === "Rock") {
-          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
-        } else if (
-          r_computer_choice === "Scissors" &&
-          r_user_choice === "Paper"
-        ) {
-          result = `You Lose! ${r_computer_choice} beats ${r_user_choice}`;
-        } else if (r_computer_choice === r_user_choice) {
-          result = `It is a tie! ${r_computer_choice} equals ${r_user_choice}`;
-        } else {
-          result = `You Won! ${r_user_choice} beats ${r_computer_choice}`;
-        }
-        return result.includes("Won") ? 1 : 0;
-      }
-
-      //   console.log("hey");
-      //   getComputerChoice();
-
-      function game() {
-        let gameResultComp = 0;
-        let gameResultUser = 0;
-        for (let i = 0; i <= 3; i++) {
-          getUsersChoice() === 0 ? gameResultComp++ : gameResultUser++;
-        }
-        gameResultUser > gameResultComp
-          ? alert(
-              `You WON: your result is ${gameResultUser} and the computer got ${gameResultComp}`
-            )
-          : gameResultUser === gameResultComp
-          ? alert(
-              `It is a tie: your result is ${gameResultUser} and the computer got ${gameResultComp}`
-            )
-          : alert(
-              `You Lose: your result is ${gameResultUser} and the computer got ${gameResultComp}`
-            );
-      }
-      game();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
