@@ -107,19 +107,12 @@ function reset() {
     result.removeChild(document.querySelector(".result_para"));
   user.setAttribute("style", "display:none");
   computer.setAttribute("style", "display:none");
-  // result.setAttribute("style", "display:none");
   menu.setAttribute("style", "display:none");
   button.setAttribute("style", "display:flex");
   rps_post.setAttribute("style", "display:flex");
-
-  // if (document.querySelector(".users_choice_img") !== null)
-  //   users_div.removeChild(document.querySelector(".users_choice_img"));
-  // if (document.querySelector(".computer_choice_img") !== null)
-  //   computer_div.removeChild(document.querySelector(".computer_choice_img"));
 }
 function getUsersChoice() {
   let gameResult = 0;
-  // let r_user_choice_In_Num = user_rps_choice;
   const r_user_choice = user_rps_choice;
   findChoiceInImageUser(r_user_choice);
 

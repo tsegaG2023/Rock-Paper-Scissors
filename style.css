@@ -8,8 +8,6 @@
   min-width: 55px;
   min-height: 55px;
   background-image: url("images/computer.png");
-  /* background-repeat: repeat; */
-  /* background-color: gold; */
 }
 
 .users {
@@ -17,8 +15,6 @@
   min-width: 50px;
   min-height: 50px;
   background-image: url("images/user.png");
-  /* background-repeat: repeat; */
-  /* background-color: gold; */
 }
 .highlight {
   border: 10px solid green;
@@ -65,9 +61,6 @@ ul .login {
   padding: 15px;
 }
 .header-menu {
-  /* margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px; */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -76,7 +69,6 @@ ul .login {
 .main {
   display: flex;
   justify-content: center;
-  /* border: 1px solid rgb(224, 224, 22); */
 }
 .middle {
   display: flex;
