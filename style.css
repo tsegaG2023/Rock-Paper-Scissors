@@ -4,9 +4,21 @@
   padding: 0px;
 }
 .computer {
+  display: none;
+  min-width: 55px;
+  min-height: 55px;
   background-image: url("images/computer.png");
-  background-repeat: repeat;
-  background-color: gold;
+  /* background-repeat: repeat; */
+  /* background-color: gold; */
+}
+
+.users {
+  display: none;
+  min-width: 50px;
+  min-height: 50px;
+  background-image: url("images/user.png");
+  /* background-repeat: repeat; */
+  /* background-color: gold; */
 }
 .highlight {
   border: 10px solid green;
@@ -99,4 +111,15 @@ button {
 .start {
   display: flex;
   justify-content: center;
+}
+.user_score {
+  margin-left: 22px;
+  padding-top: 12px;
+  padding-left: 1px;
+}
+
+.computer_score {
+  margin-left: 22px;
+  margin-bottom: 15px;
+  padding-top: 10px;
 }

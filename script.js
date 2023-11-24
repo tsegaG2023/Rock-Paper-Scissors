@@ -81,16 +81,33 @@ function createUserChoiceMenu() {
 }
 
 function reset() {
+  gameResultUser = 0;
+  gameResultComp = 0;
+  const user = document.querySelector(".users");
+  const computer = document.querySelector(".computer");
+  const user_score = document.querySelector(".user_score");
+  const computer_score = document.querySelector(".computer_score");
+  const computer_choice_img = document.querySelector(".computer_choice_img");
+  const users_choice_img = document.querySelector(".users_choice_img");
+  user_score.textContent = gameResultUser;
+  computer_score.textContent = gameResultComp;
   const menu = document.querySelector(".menu");
   const button = document.querySelector("button");
   const rps_post = document.querySelector("#rps-post");
-  const user = document.querySelector(".users");
-  const result = document.querySelector(".result");
-  const computer = document.querySelector(".computer");
+  computer_choice_img.setAttribute("style", "display:none;");
+  users_choice_img.setAttribute("style", "display:none;");
+  user.classList.remove("highlight");
+  computer.classList.remove("same");
+  computer.classList.remove("highlight");
+  user.classList.remove("same");
 
+  const result = document.querySelector(".result");
+
+  if (document.querySelector(".result_para") !== null)
+    result.removeChild(document.querySelector(".result_para"));
   user.setAttribute("style", "display:none");
   computer.setAttribute("style", "display:none");
-  result.setAttribute("style", "display:none");
+  // result.setAttribute("style", "display:none");
   menu.setAttribute("style", "display:none");
   button.setAttribute("style", "display:flex");
   rps_post.setAttribute("style", "display:flex");
@@ -142,6 +159,8 @@ function play(r_user_choice, r_computer_choice) {
 
 function game() {
   const users = document.querySelector(".users");
+  const user_score = document.querySelector(".user_score");
+  const computer_score = document.querySelector(".computer_score");
   const computer = document.querySelector(".computer");
   users.classList.remove("highlight");
   users.classList.remove("same");
@@ -157,7 +176,8 @@ function game() {
   } else if (result == 0) {
     gameResultComp++;
   }
-
+  user_score.textContent = gameResultUser;
+  computer_score.textContent = gameResultComp;
   if (gamePlayed >= 5) {
     calResult();
     gameResultUser = 0;
@@ -218,3 +238,4 @@ rps_img.forEach((element) => {
     }
   });
 });
+reset();
